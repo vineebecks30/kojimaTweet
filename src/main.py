@@ -2,7 +2,6 @@
 
 import sys
 import logging
-from typing import Optional
 
 from config.settings import get_settings, validate_environment
 from src.utils.logger import setup_logger
@@ -121,7 +120,7 @@ def main():
         )
 
         # Analyze tweets
-        print(f"\n🎬 Analyzing tweets for movie reviews...")
+        print("\n🎬 Analyzing tweets for movie reviews...")
         reviews = analyzer.analyze_tweets(tweets)
 
         # Display results

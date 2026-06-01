@@ -1,6 +1,5 @@
 """Logging configuration and utilities."""
 
-import os
 import logging
 import colorlog
 from pathlib import Path

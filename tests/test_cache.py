@@ -1,6 +1,5 @@
 """Tests for cache utilities."""
 
-import pytest
 import time
 from src.utils.cache import CacheManager, RateLimiter
 
