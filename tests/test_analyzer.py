@@ -127,7 +127,7 @@ class TestMovieAnalyzer:
             ),
             Tweet(
                 id="3",
-                text="Saw The Zone of Interest. Powerful and disturbing.",
+                text="Watched The Zone of Interest. Powerful and disturbing film.",
                 created_at=datetime.now(),
                 author_id="123",
                 author_username="test",
@@ -135,7 +135,7 @@ class TestMovieAnalyzer:
         ]
 
         reviews = analyzer.analyze_tweets(tweets)
-        assert len(reviews) == 2  # Only 2 movie tweets
+        assert len(reviews) == 2  # Only 2 movie tweets (tweet 2 is not about movies)
 
     def test_get_statistics_empty(self, analyzer):
         """Test statistics with no reviews."""

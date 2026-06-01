@@ -58,9 +58,14 @@ class TestCacheManager:
 
         cache.clear()
 
-        assert cache.get("key1") is None
+        # After clear, stats are reset
         assert cache.hits == 0
         assert cache.misses == 0
+        
+        # Verify cache is empty (this will increment misses)
+        result = cache.get("key1")
+        assert result is None
+        assert cache.misses == 1  # One miss from the get after clear
 
     def test_cache_disable(self):
         """Test disabling cache."""
