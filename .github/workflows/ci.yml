@@ -63,7 +63,7 @@ jobs:
         pip install black flake8 mypy bandit safety
     
     - name: Run Black
-      run: black --check src/ tests/
+      run: black --check --target-version py310 src/ tests/ config/
     
     - name: Run Flake8
       run: flake8 src/ tests/ --max-line-length=100 --ignore=E203,W503
