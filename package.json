@@ -1,0 +1,17 @@
+{
+  "name": "kojima-tweet",
+  "version": "1.0.0",
+  "description": "Simple tool to analyze Hideo Kojima's movie review tweets",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "keywords": ["twitter", "kojima", "movies"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "twitter-api-v2": "^1.15.0",
+    "dotenv": "^16.3.1"
+  }
+}
