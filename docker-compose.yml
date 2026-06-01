@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  kojima-tweet:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: kojima-tweet-app
+    env_file:
+      - .env
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped
+    networks:
+      - kojima-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  kojima-network:
+    driver: bridge
+
+# Made with Bob
